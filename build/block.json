@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/reviewer-block",
+	"version": "0.1.0",
+	"title": "Reviewer Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example static block scaffolded with Create Block tool.",
+	"attributes": {
+		"name":{
+			"type":"string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"photoID":{
+			"type":"number"
+		},
+		"photoURL":{
+			"type":"string",
+			"source": "attribute",
+			"selector":"img",
+			"attribute": "src"
+		},
+		"quote":{
+			"type":"string",
+			"source": "html",
+			"selector": ".quote"
+		}, 
+		"quoteColor":{
+			"type":"string",
+			"default":"#000000"
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"background":true,
+			"gradients": false
+		}
+	},
+	"textdomain": "reviewer-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
